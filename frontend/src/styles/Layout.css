@@ -1,0 +1,99 @@
+.layout{
+
+width: 90vw;
+margin:0 auto;
+display: flex;
+justify-content: start;
+align-items: flex-start;
+flex-direction: column;
+
+}
+
+.layout nav{
+    display: flex
+    ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 ;
+    width: 90%;
+    margin-top: 2vh;
+    position: fixed;
+    z-index: 20;
+
+
+
+}
+
+
+/* User menu container */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu - hidden by default */
+.ab {
+    background-color: #E5EAFF;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 3vh;
+    padding: 2vh;
+    color: #5044E5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show dropdown on hover */
+.user-menu:hover .ab {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown menu items */
+.ab p {
+    margin: 0.5vh 0;
+    padding: 1vh;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.ab p:hover {
+    background-color: #D0D9FF;
+}
+
+.layout .ion {
+    width: 2vw;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.layout .ion:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.layout nav img{
+    width: 12vw;
+}
+.layout nav button{
+    padding: 1vh 2vw;
+    background-color: #504EEE;
+    border: none;
+    outline: none;
+    border-radius: 10vw;
+    color: white;
+    text-transform: capitalize;
+
+
+}
+.layout nav button img{
+    width: 1vw;
+    margin-left: .5vw;
+}

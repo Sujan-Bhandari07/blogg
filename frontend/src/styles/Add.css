@@ -1,0 +1,404 @@
+/* Add Page Container */
+.add {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  margin-top: 10vh;
+
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 2rem 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  margin-top: 10vh;
+}
+
+
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #4b5563;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+
+}
+
+.sidebar-item img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+}
+
+.sidebar-item:hover {
+  background-color: #f3f4f6;
+}
+
+.sidebar-item.active {
+  background-color: #eef2ff;
+  color: #6366f1;
+}
+
+.sidebar-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #6366f1;
+  border-radius: 0 4px 4px 0;
+}
+
+.sidebar-item.active img {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(76%) saturate(2878%) hue-rotate(229deg) brightness(97%) contrast(96%);
+}
+
+/* Main Content Area */
+.add-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 2rem;
+
+  width: 60vw;
+}
+
+.add-container {
+  max-width: 1600px;
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Upload Section */
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.upload-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+
+}
+
+
+/* .upload-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.upload-box:hover {
+  border-color: #6366f1;
+  background-color: #f5f5ff;
+} */
+
+.upload-box img {
+  max-width: 150px;
+  width: 150px;
+
+
+  object-fit: cover;
+  opacity: 0.4;
+  padding: 1rem;
+}
+
+/* Input Sections */
+.input-section {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+}
+
+.select-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.select-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Description Section */
+.description-section {
+  margin-bottom: 1.5rem;
+}
+
+.text-editor {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.format-dropdown {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.toolbar-btn {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+}
+
+.toolbar-btn:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.toolbar-btn:active {
+  background-color: #e5e7eb;
+}
+
+.editor-content {
+  min-height: 300px;
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  outline: none;
+  width: 100%;
+  border: none;
+  background-color: white;
+}
+
+.editor-content:empty:before {
+  content: 'Start typing your blog description...';
+  color: #9ca3af;
+}
+
+.ai-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ai-btn:hover {
+  background-color: #374151;
+}
+
+/* Checkbox Section */
+.checkbox-section {
+  margin-bottom: 2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #6366f1;
+}
+
+/* Add Blog Button */
+.add-blog-btn {
+  padding: 0.875rem 2rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+
+.add-blog-btn:hover {
+  background-color: #4f46e5;
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+  transform: translateY(-1px);
+}
+
+.add-blog-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+.mnb{
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.25rem;
+  }
+
+  .sidebar-item span {
+    display: none;
+  }
+
+  .sidebar-item {
+    padding: 0.75rem;
+    min-width: 50px;
+    justify-content: center;
+  }
+
+  .sidebar-item.active::before {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: auto;
+    height: 4px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .add {
+    flex-direction: column;
+  }
+
+  .add-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .add-container {
+    padding: 1.5rem;
+  }
+
+  .editor-toolbar {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .toolbar-btn {
+    min-width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .format-dropdown {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .ai-btn {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .editor-content {
+    min-height: 200px;
+    padding-bottom: 0;
+  }
+}
