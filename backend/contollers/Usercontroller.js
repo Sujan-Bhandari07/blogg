@@ -81,7 +81,7 @@ const register = async (req, res) => {
 res.cookie('token',token, {
     httpOnly: true,
     secure: true,        // Ensure your app is served over HTTPS in production
-    sameSite: 'None',    // Required for cross-site cookie sharing
+    sameSite: 'none',    // Required for cross-site cookie sharing
     maxAge: 7*24*60*60*1000      // Optional: cookie expiration time in milliseconds
   });
       
@@ -116,7 +116,7 @@ const login = async (req, res) => {
     res.cookie('token', token, {
     httpOnly: true,
     secure: true,        // Ensure your app is served over HTTPS in production
-    sameSite: 'None',    // Required for cross-site cookie sharing
+    sameSite: 'none',    // Required for cross-site cookie sharing
     maxAge: 7*24*60*60*1000      // Optional: cookie expiration time in milliseconds
   });
 
