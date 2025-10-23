@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const userApi = createApi({
   reducerPath: 'userApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_BACKEND_URI ,
+    baseUrl: "https://blogg-sfpb.onrender.com" ,
     credentials:"include" // adjust to your backend URL
   }),
 
